@@ -68,6 +68,11 @@ choco install webproxy -s .
 
 Navigate to the Start Menu, make sure Web Filtering Proxy is istalled normally. Ideally also try to set your browser to use the proxy and navigate to some sites. Proxy should be working and ads should be blocked.
 
-
 ## Publish the Package to Chocolatey Package Repository
 
+To publish the package run the following commands replacing the ```[API_KEY_HERE]``` with actual key.
+
+```
+choco apikey -k [API_KEY_HERE] -source https://push.chocolatey.org/
+choco push webproxy.0.14.0.nupkg -s https://push.chocolatey.org/
+```
