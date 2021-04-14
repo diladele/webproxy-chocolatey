@@ -24,13 +24,13 @@ Get-FileHash "webproxy-1.0.0.388F_amd64.msi"
 
 ```
 
-We will now need to manually adjust some variables in ``m:\\diladele\\webproxy-chocolatey\\src\\webproxy\\tools\\chocolateyinstall.ps1`` file.
+We will now need to manually adjust some variables in ``m:\diladele\webproxy-chocolatey\src\webproxy\tools\chocolateyinstall.ps1`` file.
 
 ```bash
 # find and change the URL 
 $url = 'https://packages.diladele.com/webproxy/1.0.0.388F/amd64/release/windows/webproxy-1.0.0.388F_amd64.msi'
 
-# fine and change the checksum
+# find and change the checksum
 checksum = 'D1D300892DE25959EE694435F1D0B8F51B96B547155A06AC30F23B3BC44874B8'
 ```
 
