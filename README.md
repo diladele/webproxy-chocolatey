@@ -31,7 +31,7 @@ We will now need to manually adjust some variables in ``m:\diladele\webproxy-cho
 $url = 'https://packages.diladele.com/webproxy/1.0.0.9D80/amd64/release/windows/webproxy-1.0.0.9D80_amd64.msi'
 
 # find and change the checksum
-checksum = 'C3E51E65D4D92D53505CB000D0F2B37050550153BE173A5CBF69BCD668E9C778'
+checksum = '96159270F43ADB6C6058BA3DB62822F70349C15EA756649127600E5EFE18E20D'
 ```
 
 Make sure the version value in the ```webproxy.nuspec``` corresponds with the version of the product, like ```<version>1.0.0</version>```. Finally run the following choco command to actually build the package.
