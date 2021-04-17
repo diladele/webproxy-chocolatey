@@ -17,10 +17,10 @@ First open the PowerShell command prompt (as normal user, not as administrator) 
 cd m:\diladele\webproxy-chocolatey
 
 # download the MSI
-Invoke-WebRequest -Uri "https://packages.diladele.com/webproxy/1.0.0.388F/amd64/release/windows/webproxy-1.0.0.388F_amd64.msi" -OutFile "webproxy-1.0.0.388F_amd64.msi"
+Invoke-WebRequest -Uri "https://packages.diladele.com/webproxy/1.0.0.9D80/amd64/release/windows/webproxy-1.0.0.9D80_amd64.msi" -OutFile "webproxy-1.0.0.9D80_amd64.msi"
 
 # calculate the sha256 hash of it
-Get-FileHash "webproxy-1.0.0.388F_amd64.msi"
+Get-FileHash "webproxy-1.0.0.9D80_amd64.msi"
 
 ```
 
@@ -28,7 +28,7 @@ We will now need to manually adjust some variables in ``m:\diladele\webproxy-cho
 
 ```bash
 # find and change the URL 
-$url = 'https://packages.diladele.com/webproxy/1.0.0.388F/amd64/release/windows/webproxy-1.0.0.388F_amd64.msi'
+$url = 'https://packages.diladele.com/webproxy/1.0.0.9D80/amd64/release/windows/webproxy-1.0.0.9D80_amd64.msi'
 
 # find and change the checksum
 checksum = 'C3E51E65D4D92D53505CB000D0F2B37050550153BE173A5CBF69BCD668E9C778'
