@@ -3,6 +3,11 @@ $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://packages.diladele.com/webproxy/1.0.0.9D80/amd64/release/windows/webproxy-1.0.0.9D80_amd64.msi'
 
+$WindowsVersion=[Environment]::OSVersion.Version
+if ($WindowsVersion.Major -ne "10") {
+  throw "This package requires Windows 10."
+}
+
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
@@ -12,7 +17,7 @@ $packageArgs = @{
 
   softwareName  = 'webproxy*'
 
-  checksum      = 'C3E51E65D4D92D53505CB000D0F2B37050550153BE173A5CBF69BCD668E9C778'
+  checksum      = '96159270F43ADB6C6058BA3DB62822F70349C15EA756649127600E5EFE18E20D'
   checksumType  = 'sha256'
   checksum64    = ''
   checksumType64= 'sha256'
