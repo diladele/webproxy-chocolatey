@@ -1,7 +1,7 @@
 
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://packages.diladele.com/webproxy/1.0.0.9D80/amd64/release/windows/webproxy-1.0.0.9D80_amd64.msi'
+$url        = 'https://packages.diladele.com/webproxy/1.1.0.E057/amd64/release/windows/webproxy-1.1.0.E057_amd64.msi'
 
 $WindowsVersion=[Environment]::OSVersion.Version
 if ($WindowsVersion.Major -ne "10") {
@@ -17,7 +17,7 @@ $packageArgs = @{
 
   softwareName  = 'webproxy*'
 
-  checksum      = '96159270F43ADB6C6058BA3DB62822F70349C15EA756649127600E5EFE18E20D'
+  checksum      = 'AC1307725EFCFD3848D57BB5F4D0D0D7CD17B63EF61ADBD507D093123BAEBA92'
   checksumType  = 'sha256'
   checksum64    = ''
   checksumType64= 'sha256'
