@@ -8,7 +8,7 @@
     <title>WebProxy (Install)</title>
     <authors>Diladele B.V.</authors>
     <projectUrl>https://webproxy.diladele.com/</projectUrl>
-    <iconUrl>https://github.com/diladele/webproxy-chocolatey/blob/main/src.pack/logos/90x90.png</iconUrl>
+    <iconUrl>https://packages.diladele.com/chocolatey/logos/90x90.png</iconUrl>
     <copyright>2021, Diladele B.V.</copyright>
     <licenseUrl>https://webproxy.diladele.com/docs/license/</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
