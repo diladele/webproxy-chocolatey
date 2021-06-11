@@ -17,10 +17,10 @@ First open the PowerShell command prompt (as normal user, not as administrator) 
 cd m:\diladele\webproxy-chocolatey
 
 # download the MSI
-Invoke-WebRequest -Uri "https://packages.diladele.com/webproxy/1.2.0.E5D2/amd64/release/windows/webproxy-1.2.0.E5D2_amd64.msi" -OutFile "webproxy-1.2.0.E5D2_amd64.msi"
+Invoke-WebRequest -Uri "https://packages.diladele.com/webproxy/1.4.0.18ED/amd64/release/windows/webproxy-1.4.0.18ED_amd64.msi" -OutFile "webproxy-1.4.0.18ED_amd64.msi"
 
 # calculate the sha256 hash of it
-Get-FileHash "webproxy-1.2.0.E5D2_amd64.msi"
+Get-FileHash "webproxy-1.4.0.18ED_amd64.msi"
 
 ```
 
@@ -28,13 +28,13 @@ We will now need to manually adjust some variables in ``m:\diladele\webproxy-cho
 
 ```bash
 # find and change the URL 
-$url = 'https://packages.diladele.com/webproxy/1.2.0.E5D2/amd64/release/windows/webproxy-1.2.0.E5D2_amd64.msi'
+$url = 'https://packages.diladele.com/webproxy/1.4.0.18ED/amd64/release/windows/webproxy-1.4.0.18ED_amd64.msi'
 
 # find and change the checksum
-checksum = 'DE7216CB12BC011B1AE6C4539FC8CFC4C127F34EB465C8FF54AA995E33E22ADA'
+checksum = '99566FABD400C3834DF7E068DFE53D5B78475135F1B58D485772C5726657D96D'
 ```
 
-Make sure the version value in the ```webproxy.nuspec``` corresponds with the version of the product, like ```<version>1.2.0</version>```. Finally run the following choco command to actually build the package.
+Make sure the version value in the ```webproxy.nuspec``` corresponds with the version of the product, like ```<version>1.4.0</version>```. Finally run the following choco command to actually build the package.
 
 ```bash
 
@@ -51,7 +51,7 @@ The output of this command will indicate the package was successfully built
 m:\diladele\webproxy-chocolatey>choco pack
 Chocolatey v0.10.15
 Attempting to build package from 'webproxy.nuspec'.
-Successfully created package 'm:\diladele\webproxy-chocolatey\src\webproxy\webproxy.1.2.0.nupkg'
+Successfully created package 'm:\diladele\webproxy-chocolatey\src\webproxy\webproxy.1.4.0.nupkg'
 ```
 
 ## How to Test the Package by Installing from File
@@ -75,5 +75,5 @@ To publish the package run the following commands replacing the ```[API_KEY_HERE
 
 ```
 choco apikey -k [API_KEY_HERE] -source https://push.chocolatey.org/
-choco push webproxy.1.2.0.nupkg -s https://push.chocolatey.org/
+choco push webproxy.1.4.0.nupkg -s https://push.chocolatey.org/
 ```
