@@ -1,7 +1,7 @@
 
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://packages.diladele.com/webproxy/1.2.0.E5D2/amd64/release/windows/webproxy-1.2.0.E5D2_amd64.msi'
+$url        = 'https://packages.diladele.com/webproxy/1.4.0.18ED/amd64/release/windows/webproxy-1.4.0.18ED_amd64.msi'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -11,7 +11,7 @@ $packageArgs = @{
   
   softwareName  = 'webproxy*'
 
-  checksum      = 'DE7216CB12BC011B1AE6C4539FC8CFC4C127F34EB465C8FF54AA995E33E22ADA'
+  checksum      = '99566FABD400C3834DF7E068DFE53D5B78475135F1B58D485772C5726657D96D'
   checksumType  = 'sha256'
   
   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
