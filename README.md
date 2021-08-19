@@ -1,6 +1,6 @@
 # Chocolatey Package for Web Filtering Proxy
 
-This repo contains the sources of the Chocolatey package for Web Filtering Proxy. 
+This repo contains the sources of the Chocolatey package for Web Filtering Proxy. The current package is available at https://community.chocolatey.org/packages/webproxy/1.5.0/
 
 ## How to Build
 
