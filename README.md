@@ -75,5 +75,5 @@ To publish the package run the following commands replacing the ```[API_KEY_HERE
 
 ```
 choco apikey -k [API_KEY_HERE] -source https://push.chocolatey.org/
-choco push webproxy.1.4.0.nupkg -s https://push.chocolatey.org/
+choco push webproxy.1.5.0.nupkg -s https://push.chocolatey.org/
 ```
