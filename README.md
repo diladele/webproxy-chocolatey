@@ -1,6 +1,6 @@
 # Chocolatey Package for Web Filtering Proxy
 
-This repo contains the sources of the Chocolatey package for Web Filtering Proxy. The current package is available at https://community.chocolatey.org/packages/webproxy/2.1.0/
+This repo contains the sources of the Chocolatey package for Web Filtering Proxy. The current package is available at https://community.chocolatey.org/packages/webproxy/2.2.0/
 
 ## How to Build
 
@@ -17,10 +17,10 @@ First open the PowerShell command prompt (as normal user, not as administrator) 
 cd m:\diladele\webproxy-chocolatey
 
 # download the MSI
-Invoke-WebRequest -Uri "https://packages.diladele.com/webproxy/2.1.0.E501/amd64/release/windows/webproxy-2.1.0.E501_amd64.msi" -OutFile "webproxy-2.1.0.E501_amd64.msi"
+Invoke-WebRequest -Uri "https://packages.diladele.com/webproxy/2.2.0.DB38/amd64/release/windows/webproxy-2.2.0.DB38_amd64.msi" -OutFile "webproxy-2.2.0.DB38_amd64.msi"
 
 # calculate the sha256 hash of it
-Get-FileHash "webproxy-2.1.0.E501_amd64.msi"
+Get-FileHash "webproxy-2.2.0.DB38_amd64.msi"
 
 ```
 
@@ -28,10 +28,10 @@ We will now need to manually adjust some variables in ``m:\diladele\webproxy-cho
 
 ```bash
 # find and change the URL 
-$url = 'https://packages.diladele.com/webproxy/2.1.0.E501/amd64/release/windows/webproxy-2.1.0.E501_amd64.msi'
+$url = 'https://packages.diladele.com/webproxy/2.2.0.DB38/amd64/release/windows/webproxy-2.2.0.DB38_amd64.msi'
 
 # find and change the checksum
-checksum = '15838791ED728F6227C57D97465A0AFCC34680D5BEC014374B580A4A745D8369'
+checksum = '3FFAE88DBD44D267D0C4C4B9084FD06AD68A8291D583BF2491A80CE9C3E7939B'
 ```
 
 Make sure the version value in the ```webproxy.nuspec``` corresponds with the version of the product, like ```<version>2.1.0</version>```. Finally run the following choco command to actually build the package.
