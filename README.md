@@ -1,6 +1,6 @@
 # Chocolatey Package for Web Filtering Proxy
 
-This repo contains the sources of the Chocolatey package for Web Filtering Proxy. The current package is available at https://community.chocolatey.org/packages/webproxy/2.1.0/
+This repo contains the sources of the Chocolatey package for Web Filtering Proxy. The current package is available at https://community.chocolatey.org/packages/webproxy/2.2.0/
 
 ## How to Build
 
@@ -17,10 +17,10 @@ First open the PowerShell command prompt (as normal user, not as administrator) 
 cd m:\diladele\webproxy-chocolatey
 
 # download the MSI
-Invoke-WebRequest -Uri "https://packages.diladele.com/webproxy/2.1.0.E501/amd64/release/windows/webproxy-2.1.0.E501_amd64.msi" -OutFile "webproxy-2.1.0.E501_amd64.msi"
+Invoke-WebRequest -Uri "https://packages.diladele.com/webproxy/2.2.0.DB38/amd64/release/windows/webproxy-2.2.0.DB38_amd64.msi" -OutFile "webproxy-2.2.0.DB38_amd64.msi"
 
 # calculate the sha256 hash of it
-Get-FileHash "webproxy-2.1.0.E501_amd64.msi"
+Get-FileHash "webproxy-2.2.0.DB38_amd64.msi"
 
 ```
 
@@ -28,13 +28,13 @@ We will now need to manually adjust some variables in ``m:\diladele\webproxy-cho
 
 ```bash
 # find and change the URL 
-$url = 'https://packages.diladele.com/webproxy/2.1.0.E501/amd64/release/windows/webproxy-2.1.0.E501_amd64.msi'
+$url = 'https://packages.diladele.com/webproxy/2.2.0.DB38/amd64/release/windows/webproxy-2.2.0.DB38_amd64.msi'
 
 # find and change the checksum
-checksum = '15838791ED728F6227C57D97465A0AFCC34680D5BEC014374B580A4A745D8369'
+checksum = '3FFAE88DBD44D267D0C4C4B9084FD06AD68A8291D583BF2491A80CE9C3E7939B'
 ```
 
-Make sure the version value in the ```webproxy.nuspec``` corresponds with the version of the product, like ```<version>2.1.0</version>```. Finally run the following choco command to actually build the package.
+Make sure the version value in the ```webproxy.nuspec``` corresponds with the version of the product, like ```<version>2.2.0</version>```. Finally run the following choco command to actually build the package.
 
 ```bash
 
@@ -51,7 +51,7 @@ The output of this command will indicate the package was successfully built
 m:\diladele\webproxy-chocolatey>choco pack
 Chocolatey v0.12.1
 Attempting to build package from 'webproxy.nuspec'.
-Successfully created package 'm:\diladele\webproxy-chocolatey\src\webproxy\webproxy.2.1.0.nupkg'
+Successfully created package 'm:\diladele\webproxy-chocolatey\src\webproxy\webproxy.2.2.0.nupkg'
 ```
 
 ## How to Test the Package by Installing from File
@@ -67,7 +67,7 @@ choco install dependency-windows10
 choco install webproxy -s .
 ```
 
-Navigate to the Start Menu, make sure Web Filtering Proxy is istalled normally. Ideally also try to set your browser to use the proxy and navigate to some sites. Proxy should be working and ads should be blocked.
+Navigate to the Start Menu, make sure Web Filtering Proxy is istalled normally. Ideally also try to set your browser to use the proxy and navigate to some sites. Proxy should be working and adult sites should be blocked.
 
 ## Publish the Package to Chocolatey Package Repository
 
@@ -75,5 +75,5 @@ To publish the package run the following commands replacing the ```[API_KEY_HERE
 
 ```
 choco apikey -k [API_KEY_HERE] -source https://push.chocolatey.org/
-choco push webproxy.2.1.0.nupkg -s https://push.chocolatey.org/
+choco push webproxy.2.2.0.nupkg -s https://push.chocolatey.org/
 ```
