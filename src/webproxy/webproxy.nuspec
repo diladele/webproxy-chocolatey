@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>webproxy</id>
-    <version>2.1.0</version>
+    <version>2.2.0</version>
     <packageSourceUrl>https://github.com/diladele/webproxy-chocolatey/tree/main/src/webproxy</packageSourceUrl>
     <owners>Diladele B.V.</owners>    
     <title>WebProxy (Install)</title>
     <authors>Diladele B.V.</authors>
     <projectUrl>https://webproxy.diladele.com/</projectUrl>
     <iconUrl>https://packages.diladele.com/chocolatey/logos/90x90.png</iconUrl>
-    <copyright>2021, Diladele B.V.</copyright>
+    <copyright>2022, Diladele B.V.</copyright>
     <licenseUrl>https://webproxy.diladele.com/docs/license/</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://webproxy.diladele.com/docs/</docsUrl>
